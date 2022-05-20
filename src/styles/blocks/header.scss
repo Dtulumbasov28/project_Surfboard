@@ -1,0 +1,16 @@
+header {
+  color: $main-color;
+}
+.new {
+  width: 100px;
+  border-width: 1px;
+  @media (max-width: 768px) {
+    width: 70px;
+  }
+}
+
+.class {
+  @media (max-width: 768px) {
+    display: block;;
+  }
+}
