@@ -1,6 +1,6 @@
 const { src, dest, task, series, watch, parallel } = require("gulp");
 const rm = require("gulp-rm");
-var sass = require("gulp-sass")(require("sass"));
+const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
@@ -97,8 +97,7 @@ task("server", () => {
   browserSync.init({
     server: {
       baseDir: "./dist",
-    },
-    open: false,
+    }
   });
 });
 
@@ -114,10 +113,10 @@ task(
   series(
     "clean",
     parallel("copy:html", "styles", "scripts", "icons"),
-    "server"
-  ),
-  parallel("watch", "server")
+    parallel("watch", "server")
+  )
 );
+
 task(
   "build",
   series("clean", parallel("copy:html", "styles", "scripts", "icons"))
