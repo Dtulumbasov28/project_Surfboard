@@ -6,8 +6,9 @@ body {
 body {
   font-size: $baseFontSize;
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
-  line-height: 1.42;
+  line-height: 1.2;
   position: relative;
+  color: $grey;
 }
 
 .wrapper {

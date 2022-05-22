@@ -6,7 +6,7 @@ const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
 // const sassGlob = require("gulp-sass-glob"); не работает
 // const autoprefixer = require("gulp-autoprefixer"); не работает
-const px2rem = require("gulp-smile-px2rem");
+// const px2rem = require("gulp-smile-px2rem"); разобраться потом 
 const gcmq = require("gulp-group-css-media-queries");
 const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
@@ -33,6 +33,12 @@ task("copy:html", () => {
     .pipe(reload({ stream: true }));
 });
 
+task("copy:img", () => {
+  return src(`${SRC_PATH}/images/**/*.png`)
+  .pipe(dest(DIST_PATH))
+  .pipe(reload({ stream: true }));
+})
+
 task("styles", () => {
   return (
     src([...STYLES_LIBS, "src/styles/main.scss"])
@@ -40,7 +46,7 @@ task("styles", () => {
       .pipe(concat("main.min.scss"))
       // .pipe(sassGlob()) не работает
       .pipe(sass().on("error", sass.logError))
-      .pipe(px2rem())
+      // .pipe(px2rem())
       // .pipe(autoprefixer({
       //   cascade: false
       // })) не работает
@@ -106,13 +112,14 @@ task("watch", () => {
   watch("./src/*.html", series("copy:html"));
   watch("./src/scripts/*.js", series("scripts"));
   watch("./src/images/icons/*.svg", series("icons"));
+  watch("./src/images/**", series("copy:img"));
 });
 
 task(
   "default",
   series(
     "clean",
-    parallel("copy:html", "styles", "scripts", "icons"),
+    parallel("copy:html", "styles", "scripts", "icons", "copy:img"),
     parallel("watch", "server")
   )
 );
