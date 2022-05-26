@@ -10,10 +10,18 @@
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
 }
-.section__title--color--black {
+.section__title--benefits {
   color: $black;
+  margin-bottom: 17px;
+}
+.section__title--reviews {
+  color: $black;
+  margin-bottom: 32px;
+}
+.section__title--order {
+  color: $white;
+  margin-bottom: 59px;
 }
 .section__subtitle {
   text-align: center;
