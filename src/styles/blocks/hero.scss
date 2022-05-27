@@ -1,5 +1,5 @@
 .hero {
-  background:url("./img/background-hero.png") center/cover no-repeat;
+  background: url("./img/background-hero.png") center center/cover no-repeat;
   height: 100vh;
   min-height: 650px;
   color: $white;
@@ -13,6 +13,20 @@
 }
 .hero__title-section {
   width: 50%;
+  @include tablets {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.hero__icons-section {
+  @include tablets {
+    display: none;
+  }
 }
 .hero__main-title {
   font-size: 48px;

@@ -6,7 +6,7 @@ const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
 // const sassGlob = require("gulp-sass-glob"); не работает
 // const autoprefixer = require("gulp-autoprefixer"); не работает
-// const px2rem = require("gulp-smile-px2rem"); разобраться потом 
+const px2rem = require("gulp-smile-px2rem");
 const gcmq = require("gulp-group-css-media-queries");
 const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
@@ -46,7 +46,7 @@ task("styles", () => {
       .pipe(concat("main.min.scss"))
       // .pipe(sassGlob()) не работает
       .pipe(sass().on("error", sass.logError))
-      // .pipe(px2rem())
+      .pipe(px2rem({rem:8}))
       // .pipe(autoprefixer({
       //   cascade: false
       // })) не работает

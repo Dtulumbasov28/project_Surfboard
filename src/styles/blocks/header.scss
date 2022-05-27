@@ -2,29 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: bold;
 }
-.menu__list {
-  display: flex;
-  align-items: center;
-}
-.menu__item {
-  margin-right: 22px;
-
-  &:last-child {
-    margin-right: 0;
+.header__phone-number {
+  @include tablets {
+    display: none;
   }
-}
-.menu__link {
-  text-decoration: none;
-}
-.phone-number {
-  font-size: 22px;
-  text-decoration: none;
-
-}
-.phone-number__icon--elem {
-  fill: $white;
-  width: 13px;
-  height: 16px;
-  margin-right: 6px;
 }

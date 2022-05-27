@@ -22,7 +22,6 @@
   }
 }
 .form__title {
-  color: $white;
   margin-bottom: 2px;
 }
 .form__input {
@@ -47,4 +46,7 @@
 .form__controls {
   display: flex;
   flex-wrap: wrap;
+}
+.form__btns {
+  margin-top: 28px;
 }
