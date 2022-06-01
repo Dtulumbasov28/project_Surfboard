@@ -1,4 +1,21 @@
+.menu-tablet {
+  display: none;
+
+  @include tablets {
+    display: block;
+    height: 90px;
+    width: 100vw;
+    background: #1968b1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: calc(-50vw + 50%);
+  }
+}
 .menu {
+  margin: 0 30px;
+  padding-top: 10px;
+
   @include tablets {
     display: none;
   }
@@ -6,9 +23,12 @@
 .menu__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .menu__item {
   margin-right: 22px;
+  margin-bottom: 10px;
 
   &:last-child {
     margin-right: 0;
@@ -16,4 +36,5 @@
 }
 .menu__link {
   text-decoration: none;
+  white-space: nowrap;
 }

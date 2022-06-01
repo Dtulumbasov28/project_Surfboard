@@ -1,11 +1,20 @@
 .phone-number {
   font-size: 22px;
   text-decoration: none;
-
+  white-space: nowrap;
 }
-.phone-number__icon--elem {
+.phone-number__icon {
   fill: $white;
   width: 13px;
   height: 16px;
   margin-right: 6px;
+  flex-shrink: 0;
+}
+.footer__phone-number {
+  margin-bottom: 10px;
+}
+.footer__phone-number {
+  .phone-number__icon {
+    fill: $black;
+  }
 }

@@ -2,4 +2,6 @@
   fill: $white;
   width: 56px;
   height: 40px;
+  z-index: 1;
+  flex-shrink: 0;
 }

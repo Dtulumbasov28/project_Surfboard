@@ -1,0 +1,13 @@
+.contacts {
+  color: $black;
+  font-style: normal;
+
+  @include phones {
+    font-size: 21px;
+  }
+}
+.contacts__place {
+  @include phones {
+    margin-bottom: 8px;
+  }
+}

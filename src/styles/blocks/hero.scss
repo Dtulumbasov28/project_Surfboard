@@ -13,6 +13,7 @@
 }
 .hero__title-section {
   width: 50%;
+
   @include tablets {
     width: 100%;
     display: flex;
@@ -33,8 +34,16 @@
   font-weight: bold;
   margin-bottom: 17px;
   text-transform: uppercase;
+
+  @include phones {
+    margin-bottom: 10px;
+  }
 }
 .hero__title-desc {
   font-size: 21px;
   margin-bottom: 50px;
+
+  @include phones {
+    margin-bottom: 42px;
+  }
 }

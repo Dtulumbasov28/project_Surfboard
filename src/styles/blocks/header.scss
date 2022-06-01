@@ -1,10 +1,16 @@
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   font-weight: bold;
+
+  @include tablets {
+    align-items: center;
+  }
 }
 .header__phone-number {
+  padding-top: 6px;
+
   @include tablets {
     display: none;
   }
