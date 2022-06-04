@@ -14,24 +14,32 @@
   @include phones {
     font-size: 40px;
   }
-}
-.section__title--benefits {
-  color: $black;
-  margin-bottom: 17px;
+
+  &----benefits {
+    color: $black;
+    margin-bottom: 17px;
+  }
 
   @include phones {
     margin-bottom: 6px;
   }
-}
-.section__title--reviews {
-  color: $black;
-  margin-bottom: 32px;
-}
-.section__title--order {
-  margin-bottom: 59px;
 
-  @include tablets {
-    margin-bottom: 30px;
+  &--team {
+    color: $black;
+    margin-bottom: 53px;
+  }
+
+  &--reviews {
+    color: $black;
+    margin-bottom: 32px;
+  }
+
+  &--order {
+    margin-bottom: 59px;
+
+    @include tablets {
+      margin-bottom: 30px;
+    }
   }
 }
 .section__subtitle {
