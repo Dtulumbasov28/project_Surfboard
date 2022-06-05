@@ -1,8 +1,8 @@
-$(".reviews-switcher__link").click(function (e) {
+
+$(".reviews-switcher__link").click((e) => {
   e.preventDefault();
 });
 
-const tabLink = document.querySelectorAll("reviews-switcher__link");
 const tabsBtn = document.querySelectorAll(".reviews-switcher__item");
 const tabsItem = document.querySelectorAll(".reviews__item");
 

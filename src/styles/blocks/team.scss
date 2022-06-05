@@ -1,11 +1,13 @@
 .team {
   display: flex;
+  justify-content: space-between;
 }
 .team__item {
   flex: 1;
   text-align: center;
   position: relative;
   max-width: 290px;
+  margin-right: 32px;
 }
 .team__member {
   margin-bottom: 21px;
@@ -26,20 +28,24 @@
     margin-left: 5px;
   }
 }
-.team--version--desktop.team__content {
+.team--version--desktop .team__content {
   position: absolute;
   top: 100%;
 }
 .team__content {
   overflow: hidden;
   height: 0;
-  transition: .5s ease-in-out;
+  transition: height .3s;
+
+  &.active {
+    height: 80px;
+  }
 }
 .team__content-block {
   padding-bottom: 5px;
 }
 .team__content-title {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: $black;
   font-weight: 400;
 }
