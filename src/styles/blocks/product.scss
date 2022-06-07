@@ -1,0 +1,40 @@
+.product__container {
+  display: flex;
+  align-items: center;
+}
+.product__col {
+  width: 50%;
+  margin-right: 68px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.product__title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 24px;
+}
+.product__text {
+  margin-bottom: 24px;
+}
+.product__options {
+  display: flex;
+  margin-bottom: 24px;
+}
+.product__options-col {
+  margin-right: 52px;
+}
+.product__options-desc {
+  font-weight: bold;
+  color: $black;
+}
+.product__price {
+  display: inline-block;
+  font-size: 60px;
+  color: $black;
+  margin-right: 28px;
+}

@@ -1,6 +1,11 @@
 .team {
   display: flex;
   justify-content: space-between;
+
+  @include tablets {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .team__item {
   flex: 1;
@@ -8,9 +13,12 @@
   position: relative;
   max-width: 290px;
   margin-right: 32px;
-}
-.team__member {
-  margin-bottom: 21px;
+
+  @include tablets {
+    margin-right: 0;
+    flex: initial;
+    margin-bottom: 16px;
+  }
 }
 .team__title {
   display: inline-flex;
@@ -19,33 +27,72 @@
   color: $black;
   margin-bottom: 8px;
 
+  &.active {
+    &:after {
+      transform: rotate(-90deg) translate(20%);
+    }
+  }
+
   &:after {
     content: "";
     position: static;
     border: 4px solid transparent;
     border-left: 6px solid $black;
-    transform: rotate(90deg) translate(15%);
+    transform: rotate(90deg) translate(20%);
     margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  @include tablets {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+}
+.team--version--desktop {
+  @include tablets {
+    display: none;
   }
 }
 .team--version--desktop .team__content {
   position: absolute;
   top: 100%;
 }
+.team--version--mobile {
+  display: none;
+
+  @include tablets {
+    display: flex;
+  }
+}
 .team__content {
   overflow: hidden;
   height: 0;
-  transition: height .3s;
+  transition: height 0.3s;
 
   &.active {
-    height: 80px;
+    height: 100px;
+
+    @include tablets {
+      height: 380px;
+    }
   }
 }
-.team__content-block {
-  padding-bottom: 5px;
+.team__member {
+  max-width: 220px;
+}
+.team__member-img {
+  margin-bottom: 20px;
 }
 .team__content-title {
   margin-bottom: 6px;
   color: $black;
   font-weight: 400;
+
+  @include tablets {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+.team__content-text {
+  font-size: 18px;
 }
