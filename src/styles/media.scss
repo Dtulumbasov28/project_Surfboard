@@ -8,3 +8,8 @@
     @content;
   }
 }
+@mixin intermediate {
+  @media screen and (max-width: $intermediate) {
+    @content;
+  }
+}

@@ -44,6 +44,10 @@
   border: solid 3px transparent;
   border-radius: 4px;
 
+  &.input-error {
+    border: 3px solid #fedb3f;
+  }
+
   @include tablets {
     height: 36px;
   }
@@ -51,7 +55,7 @@
   &--textarea {
     height: 150px;
     resize: none;
-    margin-bottom: 20px;
+    margin-bottom: px;
 
     @include tablets {
       height: 86px;
@@ -59,7 +63,7 @@
   }
 
   &:focus {
-    border-color: #FEDB3F;
+    border-color: #fedb3f;
     outline: none;
   }
 }

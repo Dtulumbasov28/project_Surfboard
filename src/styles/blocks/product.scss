@@ -1,12 +1,24 @@
 .product__container {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 .product__col {
   width: 50%;
   margin-right: 68px;
 
   &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    width: auto;
+    text-align: center;
+  }
+  @include intermediate {
     margin-right: 0;
   }
 }
@@ -16,14 +28,23 @@
   font-weight: bold;
   text-transform: uppercase;
   color: $black;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 .product__text {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  padding-right: 50px;
+
+  @include tablets {
+    padding: 0 50px;
+  }
 }
 .product__options {
   display: flex;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 .product__options-col {
   margin-right: 52px;
@@ -37,4 +58,9 @@
   font-size: 60px;
   color: $black;
   margin-right: 28px;
+
+  @include intermediate {
+    font-size: 55px;
+    margin-right: 5px;
+  }
 }

@@ -1,5 +1,9 @@
 .dropdown {
   display: flex;
+
+  @include tablets {
+    display: none;
+  }
 }
 .dropdown__ingredients {
   display: flex;

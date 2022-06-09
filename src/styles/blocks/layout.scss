@@ -90,3 +90,9 @@ button {
   считают, что необходимо оставлять стрелочный вид для кнопок */
   cursor: pointer;
 }
+.bx-wrapper {
+  margin-bottom: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
