@@ -1,5 +1,5 @@
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 650px;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,12 @@
     @include tablets {
       margin-bottom: 30px;
     }
+  }
+
+  &--horizontal-menu {
+    color: $white;
+    text-align: start;
+    padding: 0px 100px 470px;
   }
 }
 .section__subtitle {

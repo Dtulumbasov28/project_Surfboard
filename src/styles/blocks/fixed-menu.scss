@@ -3,13 +3,18 @@
   top: 20%;
   right: 3%;
   z-index: $z-fixed-menu;
+  color: $white;
+
+  &--shadowed .fixed-menu__link:before {
+    background-color: $black;
+  }
 }
 .fixed-menu__item {
   margin-bottom: 6px;
 
   &--active {
     .fixed-menu__link {
-      border-color: $white;
+      border-color: $yellow;
     }
   }
 }

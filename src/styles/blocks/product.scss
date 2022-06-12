@@ -48,10 +48,25 @@
 }
 .product__options-col {
   margin-right: 52px;
+
+  @include tablets {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .product__options-desc {
   font-weight: bold;
   color: $black;
+}
+.product__buy {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 .product__price {
   display: inline-block;
@@ -61,6 +76,6 @@
 
   @include intermediate {
     font-size: 55px;
-    margin-right: 5px;
+    margin-right: 16px;
   }
 }
