@@ -5,8 +5,14 @@
   z-index: $z-fixed-menu;
   color: $white;
 
+
   &--shadowed .fixed-menu__link:before {
+    transition: .5s;
     background-color: $black;
+  }
+
+  @include phones {
+    display: none;
   }
 }
 .fixed-menu__item {
@@ -37,5 +43,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: .5s;
   }
 }

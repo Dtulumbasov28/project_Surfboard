@@ -52,13 +52,14 @@ $(".form").submit((e) => {
       $.fancybox.open({
         src: "#modal",
         type: "inline",
-        smallBtn : false,
+        smallBtn: false
       });
     });
   }
 });
 
-$(".app-close-modal").click((e) => {
+$(".app-close-modal").click(e => {
   e.preventDefault();
+
   $.fancybox.close();
-});
+})

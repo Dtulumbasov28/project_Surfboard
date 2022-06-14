@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" , chrom="1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="main.min.css" />
     <title>SURFBOARD</title>
   </head>
@@ -52,7 +51,9 @@
                     >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Как мы работаем</a>
+                    <a href="#" data-section-to="player" class="menu__link"
+                      >Как мы работаем</a
+                    >
                   </li>
                   <li class="menu__item">
                     <a href="#" data-section-to="map" class="menu__link"
@@ -71,7 +72,7 @@
                 </svg>
                 <span class="phone-number__text">8 800 903 90 90</span>
               </a>
-              <a href="#" class="hamburger">
+              <a href="#" class="hamburger" id="show">
                 <span class="hamburger__plank"></span>
                 <span class="hamburger__plank"></span>
                 <span class="hamburger__plank"></span>
@@ -303,7 +304,12 @@
                     </div>
                     <div class="product__buy">
                       <div class="product__price">7000 ₽</div>
-                      <a href="#" class="btn btn--color--yellow">Заказать</a>
+                      <a
+                        href="#"
+                        data-section-to="order"
+                        class="btn btn--color--yellow"
+                        >Заказать</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -410,7 +416,12 @@
                       </div>
                     </div>
                     <div class="product__price">12000 ₽</div>
-                    <a href="#" class="btn btn--color--yellow">Заказать</a>
+                    <a
+                      href="#"
+                      data-section-to="order"
+                      class="btn btn--color--yellow"
+                      >Заказать</a
+                    >
                   </div>
                 </div>
               </li>
@@ -515,7 +526,12 @@
                       </div>
                     </div>
                     <div class="product__price">7000 ₽</div>
-                    <a href="#" class="btn btn--color--yellow">Заказать</a>
+                    <a
+                      href="#"
+                      data-section-to="order"
+                      class="btn btn--color--yellow"
+                      >Заказать</a
+                    >
                   </div>
                 </div>
               </li>
@@ -621,7 +637,12 @@
                       </div>
                     </div>
                     <div class="product__price">12000 ₽</div>
-                    <a href="#" class="btn btn--color--yellow">Заказать</a>
+                    <a
+                      href="#"
+                      data-section-to="order"
+                      class="btn btn--color--yellow"
+                      >Заказать</a
+                    >
                   </div>
                 </div>
               </li>
@@ -1023,14 +1044,28 @@
           </div>
         </section>
         <section
+          data-sidemenu-theme="black"
+          data-section-id="player"
+          class="section player-section"
+        >
+          <div class="container">
+            <h1 class="section__title section__title--player">
+              как мы работаем
+            </h1>
+            <div class="player__wrapper">
+              <div id="yt-player" class="player__elem"></div>
+            </div>
+          </div>
+        </section>
+        <section
           data-sidemenu-theme="white"
           data-section-id="order"
           class="section order-section"
         >
           <div class="container">
-            <h2 class="section__title section__title--order">
+            <h1 class="section__title section__title--order">
               Закажите доставку
-            </h2>
+            </h1>
             <form class="form">
               <input
                 type="hidden"
@@ -1209,7 +1244,7 @@
           <a href="#" data-section-to="reviews" class="fixed-menu__link"> </a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-section-to="player" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
           <a href="#" data-section-to="order" class="fixed-menu__link"></a>
@@ -1219,8 +1254,201 @@
         </li>
       </ul>
     </nav>
+    <div class="fullscreen-menu">
+      <a href="#" class="fullscreen-menu__close" id="close">
+        <svg class="fullscreen-menu__close-icon">
+          <use xlink:href="./images/icons/sprite.svg#close"></use>
+        </svg>
+      </a>
+      <nav class="menu menu--vertical">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" data-section-to="benefits" class="menu__link">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" data-section-to="products" class="menu__link"
+              >Серфборды</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#" data-section-to="team" class="menu__link">Команда</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" data-section-to="horizontal-menu" class="menu__link"
+              >Меню</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#" data-section-to="reviews" class="menu__link">Отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" data-section-to="player" class="menu__link"
+              >Как мы работаем</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#" data-section-to="map" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"
+    ></script>
+    <script>
+      const sections = $("section");
+      const display = $(".maincontent");
+      const sideMenu = $(".fixed-menu");
+      const menuItems = sideMenu.find(".fixed-menu__item");
+
+      // const mobileDetect = new MobileDetect(window.navigator.userAgent);
+      // const isMobile = mobileDetect.mobile(); Ошибка "MobileDetect is not defined"
+
+      let inScroll = false;
+
+      sections.first().addClass("active");
+
+      const countSectionPosition = (sectionEq) => {
+        const position = sectionEq * -100;
+
+        if (isNaN(position)) {
+          console.error("Передано не верное значение в countSectionPosition");
+          return 0;
+        }
+
+        return position;
+      };
+
+      const changeMenuThemeForSection = (sectionEq) => {
+        const currentSection = sections.eq(sectionEq);
+        const menuTheme = currentSection.attr("data-sidemenu-theme");
+        const activeClass = "fixed-menu--shadowed";
+
+        if (menuTheme === "black") {
+          sideMenu.addClass(activeClass);
+        } else {
+          sideMenu.removeClass(activeClass);
+        }
+      };
+
+      const reseetActiveClassForItem = (items, itemEq, activeClass) => {
+        items
+          .eq(itemEq)
+          .addClass(activeClass)
+          .siblings()
+          .removeClass(activeClass);
+      };
+
+      const performTransition = (sectionEq) => {
+        if (inScroll) return;
+
+        const transitionOver = 1000;
+        const mouseInertiaOver = 300;
+
+        inScroll = true;
+
+        const position = countSectionPosition(sectionEq);
+
+        changeMenuThemeForSection(sectionEq);
+
+        display.css({
+          transform: `translateY(${position}%)`,
+        });
+
+        reseetActiveClassForItem(sections, sectionEq, "active");
+
+        setTimeout(() => {
+          inScroll = false;
+          reseetActiveClassForItem(
+            menuItems,
+            sectionEq,
+            "fixed-menu__item--active"
+          );
+        }, transitionOver + mouseInertiaOver);
+      };
+
+      const viewportScroller = () => {
+        const activeSection = sections.filter(".active");
+        const nextSection = activeSection.next();
+        const prevSection = activeSection.prev();
+
+        return {
+          next() {
+            if (nextSection.length) {
+              performTransition(nextSection.index());
+            }
+          },
+          prev() {
+            if (prevSection.length) {
+              performTransition(prevSection.index());
+            }
+          },
+        };
+      };
+
+      $(window).on("wheel", (e) => {
+        const deltaY = e.originalEvent.deltaY;
+        const scroller = viewportScroller();
+
+        if (deltaY > 0) {
+          scroller.next();
+        }
+
+        if (deltaY < 0) {
+          scroller.prev();
+        }
+      });
+
+      $(window).on("keydown", (e) => {
+        const tagName = e.target.tagName.toLowerCase();
+        const userNotTypingInInputs =
+          tagName === "input" || tagName === "textarea";
+        const scroller = viewportScroller();
+
+        if (userNotTypingInInputs) return;
+
+        switch (e.keyCode) {
+          case 38:
+            scroller.prev();
+            break;
+
+          case 40:
+            scroller.next();
+            break;
+        }
+      });
+
+      $(".wrapper").on("touchmove", (e) => e.preventDefault());
+
+      $("[data-section-to]").click((e) => {
+        e.preventDefault();
+
+        const $this = $(e.currentTarget);
+        const target = $this.attr("data-section-to");
+        const reqSection = $(`[data-section-id=${target}]`);
+
+        performTransition(reqSection.index());
+      });
+
+      // if (isMobile) {  Ошибка "MobileDetect is not defined"
+      //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+      $("body").swipe({
+        swipe: function (event, direction) {
+          const scroller = viewportScroller();
+
+          let scrollDirection = "";
+
+          if (direction == "up") scrollDirection = "next";
+          if (direction == "down") scrollDirection = "prev";
+
+          scroller[scrollDirection]();
+        },
+      });
+      // }
+    </script>
     <script>
       const slider = $(".products").bxSlider({
         pager: false,
@@ -1235,9 +1463,8 @@
         slider.goToNextSlide();
       });
     </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9f34e6de-5bfe-4972-aea2-b11055170785&lang=ru_RU"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>

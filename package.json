@@ -43,6 +43,7 @@
     "sass": "^1.51.0"
   },
   "dependencies": {
+    "fancybox": "^3.0.1",
     "jquery-touchswipe": "^1.6.19",
     "normalize.css": "^8.0.1"
   }
