@@ -1,4 +1,4 @@
-Запуск проекта:
+Запуск проекта: 
 
 1. Скачать проект на ПК или клонировать: git clone https://github.com/Dtulumbasov28/surfboard.git;
 
