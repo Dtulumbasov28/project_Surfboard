@@ -97,7 +97,7 @@ task("icons", () => {
         },
       })
     )
-    .pipe(dest(`${DIST_PATH}/images/icons`));
+    .pipe(dest(`${DIST_PATH}/img/icons`));
 });
 
 task("server", () => {
@@ -127,5 +127,5 @@ task(
 
 task(
   "build",
-  series("clean", parallel("copy:html", "styles", "scripts", "icons"))
+  series("clean", parallel("copy:html", "styles", "scripts", "icons", "copy:img"))
 );
