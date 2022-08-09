@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "gulp": "cross-env NODE_ENV=dev gulp",
-    "build": "cross-env NODE_ENV=prod gulp build"
+    "build": "cross-env NODE_ENV=prod gulp build",
+	 "predeploy": "npm run build",
+	 "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
     "@babel/preset-env": "^7.17.12",
     "browser-sync": "^2.27.9",
     "cross-env": "^7.0.3",
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
