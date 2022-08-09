@@ -1,5 +1,5 @@
-node_modules
-.vscode
-# package-lock.json
-.DS_Store
-dist
+package-lock.json
+dist/
+node_modules/
+.gitignore
+
