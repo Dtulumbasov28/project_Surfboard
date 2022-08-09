@@ -127,5 +127,5 @@ task(
 
 task(
   "build",
-  series("clean", parallel("copy:html", "styles", "scripts", "copy:img"))
+  series("clean", parallel("copy:html", "styles", "scripts", "icons", "copy:img"))
 );
