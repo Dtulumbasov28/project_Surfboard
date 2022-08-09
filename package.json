@@ -1,5 +1,6 @@
 {
   "name": "project-surfboard",
+  "homepage": "https://github.com/Dtulumbasov28/project_Surfboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dtulumbasov28/surfboard.git"
+    "url": "git+https://github.com/Dtulumbasov28/project_Surfboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dtulumbasov28/surfboard/issues"
+    "url": "https://github.com/Dtulumbasov28/project_Surfboard/issues"
   },
-  "homepage": "https://github.com/Dtulumbasov28/surfboard#readme",
   "devDependencies": {
     "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
